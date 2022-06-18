@@ -1,6 +1,6 @@
-ʙᴇsᴛ ᴍᴜsɪᴄ sᴏᴜʀᴄᴇ ᴍᴀᴅᴇ ʙʏ  [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)
+ʙᴇsᴛ ᴍᴜsɪᴄ sᴏᴜʀᴄᴇ ᴍᴀᴅᴇ ʙʏ  [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://telegram.me/tgshadow_fighters)
 
-ʙᴏᴛ: [ᴀᴍᴀʟᴀ](https://t.me/Amalamusicbot)
+ʙᴏᴛ: [ᴀᴍᴀʟᴀ](https://telegram.me/Amalamusicbot)
 
 <p align="center"><a href="https://t.me/teamshadowprojects"><img src="https://telegra.ph/file/5c40c60faa98656741eb3.jpg" width="300"></a></p>
 
