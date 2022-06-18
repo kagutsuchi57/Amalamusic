@@ -129,13 +129,10 @@ async def get_uptime(c: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
         photo=f"https://telegra.ph/file/4963e9019e0328075e980.jpg", 
-        caption=f""" 💞 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ʙᴏᴛ sᴛᴀᴛᴜs:\n
+        caption=f""" 💞 **ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ʙᴏᴛ ᴜᴘᴛɪᴍᴇ**:\n
 ➠ **ᴜᴘᴛɪᴍᴇ:** **{uptime}**\n
-
 ➠ **ᴜsᴇʀ:** **{message.from_user.mention()}**\n
-
 ➠ **sᴛᴀʀᴛ ᴛɪᴍᴇ:** **{START_TIME_ISO}**\n
-
 ➠ **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** **@tgshadow_fighters**""", 
         reply_markup=InlineKeyboardMarkup(
             [
@@ -151,6 +148,6 @@ async def get_uptime(c: Client, message: Message):
 @Client.on_message(command("ping") & filters.group & ~filters.edited)
 async def ping_pong(c: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
+    m_reply = await message.reply_text("**ᴘɪɴɢɪɴɢ...**")
     delta_ping = time() - start
-    await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("💝 **ᴘᴏɴɢ!!**\n" f"💖 **{delta_ping * 1000:.3f} ms**")
