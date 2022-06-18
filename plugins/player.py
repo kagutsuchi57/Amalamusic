@@ -75,7 +75,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image1 = Image.open("./background.png")
-    image2 = Image.open("resource/thumbnail.png")
+    image2 = Image.open("resource/telugucoders.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
@@ -248,7 +248,7 @@ async def play(_, message: Message):
             return await lel.edit(
                 "**ᴘʟᴇᴀsᴇ ᴛʏᴘᴇ ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ ᴄᴏʀʀᴇᴄᴛ...**"
             )
-        await lel.edit("**🔄 ᴘʀᴏᴄᴇssɪɴɢ sᴏɴɢ ғʀᴏᴍ sʜᴀᴅᴏᴡ sᴇᴠᴇʀ...**")
+        await lel.edit("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%**")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -334,7 +334,7 @@ async def play(_, message: Message):
 async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     await message.reply_text(
-        "**✅ ᴍᴜsɪᴄ ʙᴏᴛ sᴜᴄᴄᴇssҒᴜʟʟʏ ᴘᴀᴜsᴇᴅ..**"
+        f"**🙊 sᴜᴄᴄᴇssғᴜʟʟʏ ᴘᴀᴜsᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ᴘᴀᴜsᴇᴅ ʙʏ: {message.from_user.mention()}**"
     )
 
 
@@ -343,7 +343,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await clientbot.pytgcalls.resume_stream(message.chat.id)
     await message.reply_text(
-        "**✅ ᴍᴜsɪᴄ ʙᴏᴛ sᴜᴄᴄᴇssҒᴜʟʟʏ ʀᴇsᴜᴍᴇᴅ...**"
+        f"**👻 sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴜᴍᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ʀᴇsᴜᴍᴇᴅ ʙʏ: {message.from_user.mention()}**"
     )
 
 
@@ -374,7 +374,7 @@ async def skip(_, message: Message):
 
 
     await message.reply_text(
-        "**✔ ᴍᴜsɪᴄ ʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ sᴋɪᴘᴘᴇᴅ ᴛᴏ ɴᴇxᴛ sᴏɴɢ**"
+        f"**🥳 sᴋɪᴘᴘᴇᴅ ᴛᴏ ᴛʜᴇ ɴᴇxᴛ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ sᴋɪᴘᴘᴇᴅ ʙʏ: {message.from_user.mention()}**"
     ) 
 
 
@@ -388,12 +388,13 @@ async def end(_, message: Message):
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
     await message.reply_text(
-        "**❌ ᴍᴜsɪᴄ ʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅɪsᴄᴏɴɴᴇᴄᴛᴇᴅ ғʀᴏᴍ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**"
+        f"**🚫 sᴜᴄᴄᴇssғᴜʟʟʏ ᴇɴᴅᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ᴇɴᴅᴇᴅ ʙʏ: {message.from_user.mention()}**"
     )
 
 
 @Client.on_message(commandpro(["/reload", "/admincache"]) & other_filters)
 @errors
+@authorized_users_only
 async def reload(client, message: Message):
     set(
         message.chat.id,
@@ -404,5 +405,5 @@ async def reload(client, message: Message):
     )
 
     await message.reply_text(
-        "**✅ sᴜᴄᴄᴇssҒᴜʟʟʏ ʀᴇʟᴏᴀᴅᴇᴅ ᴍᴜsɪᴄ ʙᴏᴛ**\n☑ **ᴀᴅᴍɪɴ ʟɪsᴛ sᴜᴄᴄᴇssғᴜʟ ᴜᴘᴅᴀᴛᴇᴅ..**"
+        f"**💖 sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʟᴏᴀᴅᴇᴅ ᴍᴜsɪᴄ ʙᴏᴛ.\n💞 sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇʟᴏᴀᴅᴇᴅ ᴀᴅᴍɪɴ ʟɪsᴛ.\n╰ ᴍᴜsɪᴄ ʙᴏᴛ ʀᴇʟᴏᴀᴅᴇᴅ ᴀᴅᴍɪɴ ʙʏ: {message.from_user.mention()}**"
     )
