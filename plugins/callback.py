@@ -219,7 +219,7 @@ async def info(_, query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("pause_vc"))
-async def pause_vc(_, query: CallbackQuery):
+async def pause_vc(client, query: CallbackQuery):
     if query.message.sender_chat:
         return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
@@ -228,7 +228,7 @@ async def pause_vc(_, query: CallbackQuery):
     chat_id = query.message.chat.id
     if queues.Queue(chat_id):
         try:
-            await pytgcalls.pause_stream(message.chat.id)
+            await client.pytgcalls.pause_stream(message.chat.id)
             await query.edit_message_text(
                 "ɪɪ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴘᴀᴜsᴇᴅ", 
             )
