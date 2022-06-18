@@ -3,7 +3,7 @@
     "logo": "",
     "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/blackcat097/Adiplay",
+    "repository": "https://github.com/Telugucoders/Amalamusic",
     "stack": "container",
     "env": {
         "API_ID": {
