@@ -111,15 +111,22 @@ async def gelp(client: Client, message: Message):
 💘 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ sᴇᴛᴜᴘ ᴛʜɪs ʙᴏᴛ? ʀᴇᴀᴅ 💖 sᴇᴛᴛɪɴɢ ᴜᴘ ᴛʜɪs ʙᴏᴛ ɪɴ ɢʀᴏᴜᴘ **\n
 💗 **ᴛᴏ ᴋɴᴏᴡ ᴘʟᴀʏ /ᴀᴜᴅɪᴏ? ʀᴇᴀᴅ 💖 ǫᴜɪᴄᴋ ᴜsᴇ ᴄᴏᴍᴍᴀɴᴅs **\n
 💝 **ᴛᴏ ᴋɴᴏᴡ ᴇᴠᴇʀʏ sɪɴɢʟᴇ ᴄᴏᴍᴍᴀɴᴅ ᴏғ ʙᴏᴛ? ʀᴇᴀᴅ 💖 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs**\n """,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ", callback_data="command_list")
-                ]
-            ]
-        ),
-    )
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs", callback_data="general_list"), 
+            ],[
+            InlineKeyboardButton("sᴋɪᴘ", callback_data="skip_list"), 
+            InlineKeyboardButton("ᴘᴀᴜsᴇ", callback_data="pause_list"), 
+            ],[
+            InlineKeyboardButton("ʀᴇsᴜᴍᴇ", callback_data="resume_list"), 
+            InlineKeyboardButton("sᴛᴏᴘ", callback_data="stop_list"), 
+            ],[
+            InlineKeyboardButton("ᴘʟᴀʏ", callback_data="play_list"), 
+            InlineKeyboardButton("sᴏᴜʀᴄᴇ", callback_data="source"), 
+            ],[
+            InlineKeyboardButton("◁", callback_data="set_close"), 
+            ]]
+            ) 
+        ) 
 
 
 @Client.on_message(command("uptime") & filters.group & ~filters.edited)
