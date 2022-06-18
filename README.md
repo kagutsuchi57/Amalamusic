@@ -33,7 +33,7 @@
 
 # ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ
 
--[ᴋᴀɴɴᴀ](https://github.com/blackcat097) •ᴏᴡɴᴇʀ•
+- [ᴋᴀɴɴᴀ](https://github.com/blackcat097) •ᴏᴡɴᴇʀ•
 
 
 
