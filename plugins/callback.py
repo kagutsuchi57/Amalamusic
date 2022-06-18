@@ -11,7 +11,7 @@ menu_keyboard = InlineKeyboardMarkup(
         [
             
             InlineKeyboardButton("▷", callback_data="resume_vc"),
-            InlineKeyboardButton("II", callback_data="pause_vc"),
+            InlineKeyboardButton("II", callback_data="pausevc"),
             ],[
             InlineKeyboardButton("‣‣I", callback_data="skip_vc"),
             InlineKeyboardButton("▢", callback_data="stop_vc"),
@@ -218,8 +218,8 @@ async def info(_, query: CallbackQuery):
     ) 
 
 
-@Client.on_callback_query(filters.regex("pause_vc"))
-async def pause_vc(client, query: CallbackQuery):
+@Client.on_callback_query(filters.regex("pausevc"))
+async def pausevc(_, client, query: CallbackQuery):
     if query.message.sender_chat:
         return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
