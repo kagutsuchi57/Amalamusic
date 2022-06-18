@@ -4,7 +4,7 @@ from modules.clientbot.queues import queues, clear
 import asyncio
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
-
+from modules.clientbot.clientbot import client, pytgcalls
 
 menu_keyboard = InlineKeyboardMarkup(
     [
@@ -219,7 +219,7 @@ async def info(_, query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("pausevc"))
-async def pausevc(_, client, query: CallbackQuery):
+async def pausevc(_, query: CallbackQuery):
     if query.message.sender_chat:
         return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
