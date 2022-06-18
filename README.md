@@ -1,4 +1,12 @@
-. 
+
+
+
+
+
+- FFmpeg
+- NodeJS [nodesource.com](https://nodesource.com/)
+- Python 3.8+ or 3.7
+- [PyTgCallss](https://github.com//calls)
 
 
 
