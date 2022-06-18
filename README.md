@@ -33,10 +33,10 @@
 
 # ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ
 
-- [ᴋᴀɴɴᴀ](https://github.com/blackcat097) •ᴏᴡɴᴇʀ•
+- [ᴋᴀɴɴᴀ](https://github.com/blackcat097)  **•ᴏᴡɴᴇʀ•**
 
 
-- [sᴀɴᴛʜᴜ](https://github.com/santhumusic) •ᴄᴏ-ᴏᴡɴᴇʀ•
+- [sᴀɴᴛʜᴜ](https://github.com/santhumusic) **•ᴄᴏ-ᴏᴡɴᴇʀ•**
 
 - ɢʀᴏᴏᴛ **ʙᴇᴛᴛᴀ**
 
