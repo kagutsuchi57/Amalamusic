@@ -2,6 +2,9 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram import Client, filters
 from modules.clientbot.queues import queues, clear          
 import asyncio
+from pytgcalls import PyTgCalls
+from pytgcalls.types import Update
+
 
 menu_keyboard = InlineKeyboardMarkup(
     [
