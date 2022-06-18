@@ -4,7 +4,7 @@ from modules.clientbot.queues import queues, clear
 import asyncio
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
-from modules.clientbot.clientbot import client, pytgcalls
+from modules.clientbot.clientbot import client
 
 menu_keyboard = InlineKeyboardMarkup(
     [
@@ -228,7 +228,7 @@ async def pausevc(_, query: CallbackQuery):
     chat_id = query.message.chat.id
     if queues.Queue(chat_id):
         try:
-            await client.pytgcalls.pause_stream(message.chat.id)
+            await client.pause_stream(message.chat.id)
             await query.edit_message_text(
                 "ɪɪ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴘᴀᴜsᴇᴅ", 
             )
