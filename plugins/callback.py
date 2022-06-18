@@ -1,6 +1,7 @@
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
-from modules.utils.lang import *             
+from modules.clientbot.queues import queues, clear          
+import asyncio
 
 menu_keyboard = InlineKeyboardMarkup(
     [
@@ -20,8 +21,7 @@ menu_keyboard = InlineKeyboardMarkup(
 
 
 @Client.on_callback_query(filters.regex("home_start"))
-@languageCB
-async def start_set(query: CallbackQuery):
+async def start_set(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""👋🏻 **ʜᴇʟʟᴏ {query.message.from_user.mention()} ɪᴀᴍ ᴀ ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ʙᴏᴛ ɪᴀᴍ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ.. 
 
@@ -30,21 +30,20 @@ async def start_set(query: CallbackQuery):
 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) !**
 """, 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton(_["S_B_1"], callback_data="command_list"), 
+            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ & ʜᴇʟᴘ", callback_data="command_list"), 
             ],[
-            InlineKeyboardButton(_["S_B_2"], url="https://t.me/tgshadow_fighters"), 
-            InlineKeyboardButton(_["S_B_3"], callback_data="_langs"), 
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
             ],[
-            InlineKeyboardButton(_["S_B_4"], url=f"https://t.me/Amalamusicbot?startgroup=true")
+            InlineKeyboardButton("✚ ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/Amalamusicbot?startgroup=true")
             ]]
             ) 
-        )    
+        ) 
      
 
 @Client.on_callback_query(filters.regex("command_list"))
-@languageCB
-async def commands_set(query: CallbackQuery):
-    await query.answer("ᴏᴘᴇɴɪɴɢ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ", show_alert=True) 
+async def commands_set(_, query: CallbackQuery):
+    await query.answer("command list") 
     await query.edit_message_text(
         f"""💗 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 
 ➠ ʜᴇʟʟᴏ ɴᴀᴍsᴛʜᴇ ᴀɴɴᴀ ᴛʜɪs ɪs ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ɢᴜɪᴅᴇ ᴡʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ʏᴏᴜ ɴᴇᴅᴅ sᴇʟᴇᴄᴛ ʜᴇʀᴇ.. 
@@ -70,9 +69,8 @@ async def commands_set(query: CallbackQuery):
     
 
 @Client.on_callback_query(filters.regex("general_list"))
-@languageCB
-async def general_list(query: CallbackQuery):
-    await query.answer("ᴏᴘᴇɴɪɴɢ ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs", show_alert=True)
+async def general_list(_, query: CallbackQuery):
+    await query.answer("general commands")
     await query.edit_message_text(
         f"""🥳 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 ➠ /play (sᴏɴɢ ɴᴀᴍᴇ/ʟɪɴᴋ) - ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ
@@ -95,8 +93,7 @@ async def general_list(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("skip_list"))
-@languageCB
-async def skip_list(query: CallbackQuery):
+async def skip_list(_, query: CallbackQuery): 
     await query.answer("skiped current song")
     await query.edit_message_text(
         f"""🚩 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
@@ -115,7 +112,7 @@ async def skip_list(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("pause_list"))
-async def pause_list(query: CallbackQuery):
+async def pause_list(_, query: CallbackQuery):
     await query.answer("pause current playing song")
     await query.edit_message_text(
         f"""💘 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
@@ -134,7 +131,7 @@ async def pause_list(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("resume_list")) 
-async def resume_list(query: CallbackQuery):
+async def resume_list(_, query: CallbackQuery): 
     await query.answer("resume current playing song")
     await query.edit_message_text(
         f"""❤ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
@@ -153,7 +150,7 @@ async def resume_list(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("stop_list"))
-async def stop_list(query: CallbackQuery):
+async def stop_list(_, query: CallbackQuery):
     await query.answer("stopping current playing song")
     await query.edit_message_text(
         f"""💓 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
@@ -172,7 +169,7 @@ async def stop_list(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("play_list"))
-async def play_list(query: CallbackQuery):
+async def play_list(_, query: CallbackQuery):
     await query.answer("playing song in vc")
     await query.edit_message_text(
         f"""✨ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
@@ -191,7 +188,7 @@ async def play_list(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("source"))
-async def source(query: CallbackQuery):
+async def source(_, query: CallbackQuery): 
     await query.answer("team shadow source code")
     await query.edit_message_text(
         f"""❣️ **ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
@@ -203,7 +200,7 @@ async def source(query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("info"))
-async def info(query: CallbackQuery):
+async def info(_, query: CallbackQuery):
     await query.answer("information")
     await query.edit_message_text(
         f"""✨ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
@@ -218,22 +215,45 @@ async def info(query: CallbackQuery):
     ) 
 
 
+@Client.on_callback_query(filters.regex("pause_vc"))
+async def pause_vc(_, query: CallbackQuery):
+    if query.message.sender_chat:
+        return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
+    a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
+    if not a.can_manage_voice_chats:
+        return await query.answer("💞 ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
+    chat_id = query.message.chat.id
+    if queues.Queue(chat_id):
+        try:
+            await clientbot.pytgcalls.pause_stream(message.chat.id)
+            await query.edit_message_text(
+                "ɪɪ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴘᴀᴜsᴇᴅ", 
+            )
+        except Exception as e:
+            await query.edit_message_text(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
+    else:
+        await query.answer("🚫 ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ ɴᴏᴡ", show_alert=True)
+
+
 @Client.on_callback_query(filters.regex("set_close"))
-async def on_close_menu(query: CallbackQuery):
+async def on_close_menu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
         return await query.answer("❗ ᴏɴʟʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ ᴘᴇʀᴍɪssɪᴏɴ ᴛʜᴀᴛ ᴄᴀɴ ᴛᴀᴘ ᴛʜɪs ʙᴜᴛᴛᴏɴ !", show_alert=True)
     await query.message.delete()
 
 @Client.on_callback_query(filters.regex("close_panel"))
-async def in_close_panel(query: CallbackQuery):
+async def in_close_panel(_, query: CallbackQuery):
     await query.message.delete()
 
 @Client.on_callback_query(filters.regex("menu")) 
-async def menu(query: CallbackQuery):
+async def menu(_, query: CallbackQuery):
     user_id = query.from_user.id
     await query.edit_message_text(
         text=f"""ᴅᴇꜱɪɢɴᴇᴅ ʙʏ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs""",
         disable_web_page_preview=True, 
         reply_markup=menu_keyboard
     ) 
+
+
+
