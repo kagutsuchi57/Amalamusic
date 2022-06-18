@@ -31,6 +31,10 @@
 [![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/Telugucoders/Amalamusic&envs=API_ID,API_HASH,BOT_TOKEN,STRING_SESSION)
 
 
+# ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ
+
+-[ᴋᴀɴɴᴀ](https://github.com/blackcat097) •ᴏᴡɴᴇʀ•
+
 
 
 
