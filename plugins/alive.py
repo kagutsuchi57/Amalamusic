@@ -41,7 +41,7 @@ async def start_(client: Client, message: Message):
 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)**
 """,
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("ᴛᴇᴀᴍ ᴄᴏᴅᴇʀs ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
+            InlineKeyboardButton(" ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
             ],[
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
             InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
