@@ -129,7 +129,7 @@ async def get_uptime(c: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
         photo=f"https://telegra.ph/file/4963e9019e0328075e980.jpg", 
-        caption="😊 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
+        caption="💞 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
                 f"• **ᴜᴘᴛɪᴍᴇ:** **{uptime}**\n"
                 f"• **ᴜsᴇʀ:** **{message.from_user.mention()}**\n"
                 f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** **{START_TIME_ISO}**\n"
