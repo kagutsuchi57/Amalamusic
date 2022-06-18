@@ -145,7 +145,6 @@ async def get_uptime(c: Client, message: Message):
     )
  
 
-
 @Client.on_message(command("ping") & filters.group & ~filters.edited)
 async def ping_pong(c: Client, message: Message):
     start = time()
