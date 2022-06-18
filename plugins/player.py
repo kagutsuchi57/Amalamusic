@@ -1,4 +1,5 @@
-# Aditya Halder // @AdityaHalder
+## © copyright infringement on Telugu coders 
+## © @telugucoders
 
 import os
 import aiofiles
