@@ -143,6 +143,7 @@ async def get_uptime(c: Client, message: Message):
             ]
         ),
     )
+ )
  
 
 @Client.on_message(command("ping") & filters.group & ~filters.edited)
