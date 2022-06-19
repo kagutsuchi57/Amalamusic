@@ -8,7 +8,7 @@ from modules.clientbot.clientbot import client
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import InputAudioStream
-
+from modules.clientbot import clientbot
 
 menu_keyboard = InlineKeyboardMarkup(
     [
