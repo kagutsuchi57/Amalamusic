@@ -232,7 +232,7 @@ async def pausevc(_, query: CallbackQuery):
     chat_id = query.message.chat.id
     if queues.Queue(chat_id):
         try:
-            await clientbot.pytgcalls.(message.chat.id)
+            await clientbot.pytgcalls.pause_stream(message.chat.id)
             await query.edit_message_text(
                 "ɪɪ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴘᴀᴜsᴇᴅ", 
             )
