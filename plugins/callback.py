@@ -5,6 +5,10 @@ import asyncio
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
 from modules.clientbot.clientbot import client
+from pytgcalls import StreamType
+from pytgcalls.types.input_stream import InputStream
+from pytgcalls.types.input_stream import InputAudioStream
+
 
 menu_keyboard = InlineKeyboardMarkup(
     [
@@ -228,7 +232,7 @@ async def pausevc(_, query: CallbackQuery):
     chat_id = query.message.chat.id
     if queues.Queue(chat_id):
         try:
-            await client.pause_stream(message.chat.id)
+            await clientbot.pytgcalls.(message.chat.id)
             await query.edit_message_text(
                 "ɪɪ ᴛʜᴇ sᴛʀᴇᴀᴍɪɴɢ ʜᴀs ᴘᴀᴜsᴇᴅ", 
             )
