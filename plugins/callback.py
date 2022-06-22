@@ -52,7 +52,7 @@ async def start_set(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("command_list"))
 async def commands_set(_, query: CallbackQuery):
-    await query.answer("command list") 
+    await query.answer("opening command list", show_aler=True) 
     await query.edit_message_text(
         f"""💗 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 
 ➠ ʜᴇʟʟᴏ ɴᴀᴍsᴛʜᴇ ᴀɴɴᴀ ᴛʜɪs ɪs ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ɢᴜɪᴅᴇ ᴡʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ʏᴏᴜ ɴᴇᴅᴅ sᴇʟᴇᴄᴛ ʜᴇʀᴇ.. 
@@ -79,7 +79,7 @@ async def commands_set(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("general_list"))
 async def general_list(_, query: CallbackQuery):
-    await query.answer("general commands")
+    await query.answer("opening general commands", show_alert=True)
     await query.edit_message_text(
         f"""🥳 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 ➠ /play (sᴏɴɢ ɴᴀᴍᴇ/ʟɪɴᴋ) - ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ\n
