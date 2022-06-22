@@ -37,16 +37,18 @@ async def start_set(_, query: CallbackQuery):
 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) !**
 """, 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅ & ʜᴇʟᴘ", callback_data="command_list"), 
+            InlineKeyboardButton("📚ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
             ],[
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
-            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/teamshadowprojects"), 
+            InlineKeyboardButton("$ᴅᴏɴᴀᴛᴇ", url="https://t.me/Telugucodersdonations_bot"), 
             ],[
-            InlineKeyboardButton("✚ ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/Amalamusicbot?startgroup=true")
+            InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
+            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url="https://t.me/telugucoders}"), 
+            ],[
+            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/Amalamusicbot?startgroup=true")
             ]]
             ) 
         ) 
-     
+   
 
 @Client.on_callback_query(filters.regex("command_list"))
 async def commands_set(_, query: CallbackQuery):
@@ -80,13 +82,13 @@ async def general_list(_, query: CallbackQuery):
     await query.answer("general commands")
     await query.edit_message_text(
         f"""🥳 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
-➠ /play (sᴏɴɢ ɴᴀᴍᴇ/ʟɪɴᴋ) - ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ
-➠ /song (ǫᴜᴇʀʏ) - ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ
-➠ /search (ǫᴜᴇʀʏ) - sᴇᴀʀᴄʜ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ʟɪɴᴋ
-➠ /ping - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛᴜs
-➠ /uptime - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴜᴘᴛɪᴍᴇ sᴛᴀᴛᴜs
-➠ /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ)
-➠ /help - ᴛᴏ sʜᴏᴡ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ (ғᴜʟʟ ʙᴏᴛ ɢᴜɪᴅᴇ)
+➠ /play (sᴏɴɢ ɴᴀᴍᴇ/ʟɪɴᴋ) - ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ\n
+➠ /song (ǫᴜᴇʀʏ) - ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ\n
+➠ /search (ǫᴜᴇʀʏ) - sᴇᴀʀᴄʜ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ʟɪɴᴋ\n
+➠ /ping - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛᴜs\n
+➠ /uptime - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴜᴘᴛɪᴍᴇ sᴛᴀᴛᴜs\n
+➠ /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ)\n
+➠ /help - ᴛᴏ sʜᴏᴡ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ (ғᴜʟʟ ʙᴏᴛ ɢᴜɪᴅᴇ)\n
 ➠ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -217,7 +219,7 @@ async def info(_, query: CallbackQuery):
 ❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)
 """, 
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="home_start")]]
+            [[InlineKeyboardButton("◁", callback_data="close_panel")]]
         ),
     ) 
 
