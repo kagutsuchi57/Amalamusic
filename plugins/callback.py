@@ -60,7 +60,7 @@ async def commands_set(_, query: CallbackQuery):
 ➠ ᴛʜɪs ʙᴏᴛ ᴍᴀᴅᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) 
 """, 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs", callback_data="general_list"), 
+            InlineKeyboardButton("📚ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs", callback_data="general_list"), 
             ],[
             InlineKeyboardButton("sᴋɪᴘ", callback_data="skip_list"), 
             InlineKeyboardButton("ᴘᴀᴜsᴇ", callback_data="pause_list"), 
