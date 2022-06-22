@@ -42,7 +42,7 @@ async def start_set(_, query: CallbackQuery):
             InlineKeyboardButton("$ᴅᴏɴᴀᴛᴇ", url="https://t.me/Telugucodersdonations_bot"), 
             ],[
             InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
-            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url="https://t.me/telugucoders}"), 
+            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url="https://t.me/telugucoders"), 
             ],[
             InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/Amalamusicbot?startgroup=true")
             ]]
