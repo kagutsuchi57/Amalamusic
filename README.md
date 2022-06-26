@@ -54,3 +54,5 @@
 **sᴏᴍᴇ ᴘᴇᴏᴘʟᴇ ᴛʜɪɴᴋ ᴛʜɪs ᴋᴀɴɢᴇᴅ ʙʏ ᴏᴛʜᴇʀ ʀᴇᴘᴏ ɴᴏ ʙᴀʙʏ ɪᴛs ʜᴀʀᴅ ᴡᴏʀᴋ ᴏғ** [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)
 
 
+<h4>Click the button below to deploy on Okteto!</h4>
+<p align="center"><a href="https://cloud.okteto.com/deploy?repository=https://github.com/Telugucoders/Amalamusic
