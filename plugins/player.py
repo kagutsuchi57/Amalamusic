@@ -247,7 +247,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "**ᴘʟᴇᴀsᴇ ᴛʏᴘᴇ ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ ᴄᴏʀʀᴇᴄᴛ...**"
+                "**sᴏɴɢ ɴᴀᴍᴇ ʙᴀʙʏ...**"
             )
         await lel.edit("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ**\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%**")
         query = message.text.split(None, 1)[1]
@@ -306,7 +306,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption=f"**sᴏɴɢ ᴀᴅᴅᴇᴅ ᴛᴏ ᴘʟᴀʏʟɪsᴛ ᐖ ...**".format(position),
+            caption=f"**🔊 𝗡𝗲𝘅𝘁 𝗦𝗼𝗻𝗴 𝗙𝗿𝗼𝗺 💪 𝗠𝘆 𝗦𝗲𝗿𝘃𝗲𝗿 😎 𝗔𝘁 𝗣𝗼𝘀𝗶𝘁𝗶𝗼𝗻 ❤️ ...**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -323,7 +323,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"**sᴛʀᴇᴀᴍ sᴛᴀʀᴛᴇᴅ❣️...**\n💓 **ᴘᴏᴡᴇʀᴇᴅ ʙʏ**: ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs...**".format(),
+            caption=f"**❰ 𝗔𝗺𝗮𝗹𝗮 ❘ 𝗿𝗼𝗯𝗼𝘁 ❱ ❤ 𝗡𝗼𝘄 🤘 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 📀 𝗙𝗿𝗼𝗺 🔊 𝗽𝗿𝗶𝘃𝗮𝘁𝗲  😎 𝗦𝗲𝗿𝘃𝗲𝗿...**".format(),
            )
 
     os.remove("final.png")
