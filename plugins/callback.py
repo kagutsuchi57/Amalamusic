@@ -230,7 +230,7 @@ async def info(_, query: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("pausevc"))
-async def pausevc(_, query: CallbackQuery):
+async def pausevc(_, query: CallbackQuery, message: Message):
     if query.message.sender_chat:
         return await query.answer("ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
