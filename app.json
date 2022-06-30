@@ -25,6 +25,10 @@
         "BOT_USERNAME": {
             "description": "PUT YOUR BOT USERNAME WITHOUT @",
             "required": true
+        },
+        "SUDO_USERS": {
+            "description": "PUT YOUR SUDO USERS ID",
+            "required": true
         }
     },
     "buildpacks": [
