@@ -1,4 +1,4 @@
-©copyright infringement on Telugu Coders
+## ©copyright infringement on Telugu Coders
 
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
@@ -13,7 +13,7 @@ from pytgcalls.types.input_stream import InputAudioStream
 from modules.clientbot import clientbot
 
 
-## don't change any value in this repo if you change the value bot will crash your heroku accounts
+## don't change any value in this repo if you change the value bot will crash your heroku accounts. 
 
 menu_keyboard = InlineKeyboardMarkup(
     [
