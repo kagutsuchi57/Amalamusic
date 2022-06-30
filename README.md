@@ -14,14 +14,14 @@
 
 
 
-- FFmpeg
-- NodeJS [nodesource.com](https://nodesource.com/)
+- ғғᴍᴘᴇɢ
+- ɴᴏᴅᴇᴊs [ɴᴏᴅᴇsᴏᴜʀᴄᴇ.ᴄᴏᴍ](https://nodesource.com/)
 - Python 3.8 or 3.9+
-- [PyTgCallss](https://github.com/Telugucoders/calls)
+- [ᴘʏᴛɢᴄᴀʟʟss](https://github.com/Telugucoders/calls)
 
 
 
-<h4>Click the button below to deploy Telugu Coders on Heroku!</h4>    
+<h4>ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴏɴ ʜᴇʀᴏᴋᴜ!</h4>    
 <a href="https://telugucoders.github.io/telugucodersdeploy/"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a>
 
 ɴᴏᴛᴇ: ᴡʜᴇɴ ᴜ ᴅᴇᴘʟᴏʏ ɪɴ ʜᴇʀᴏᴋᴜ ᴜsᴇ ᴇᴜʀᴏᴘᴇ sᴇʀᴠᴇʀ ᴜ ᴡɪʟʟ ɢᴇᴛ ɴᴏ ʟᴀɢ ɪssᴜᴇ
@@ -57,5 +57,5 @@
 **sᴏᴍᴇ ᴘᴇᴏᴘʟᴇ ᴛʜɪɴᴋ ᴛʜɪs ᴋᴀɴɢᴇᴅ ʙʏ ᴏᴛʜᴇʀ ʀᴇᴘᴏ ɴᴏ ʙᴀʙʏ ɪᴛs ʜᴀʀᴅ ᴡᴏʀᴋ ᴏғ** [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)
 
 
-<h4>Click the button below to deploy on Okteto!</h4>
+<h4>ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴏɴ ᴏᴋᴛᴇᴛᴏ!</h4>
 <p align="center"><a href="https://cloud.okteto.com/deploy?repository=https://github.com/Telugucoders/Amalamusic"><img src="https://img.shields.io/badge/Deploy%20To%20Okteto-informational?style=for-the-badge&logo=Okteto" width="200""/></a>
