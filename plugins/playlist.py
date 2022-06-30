@@ -7,7 +7,7 @@ from pyrogram.types import (
 from pyrogram import Client
 
 from modules.helpers.decorators import authorized_users_only
-from modules.clientbot.queues import QUEUE, put
+from modules.clientbot.queues import queues, put
 from modules.helpers.filters import command, other_filters
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputStream
