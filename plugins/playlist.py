@@ -7,7 +7,7 @@ from pyrogram.types import (
 from pyrogram import Client
 
 from modules.helpers.decorators import sudo_users_only
-from driver.queues import QUEUE, get_queue
+from modules.queues import QUEUE, get_queue
 from driver.filters import command, other_filters
 
 
