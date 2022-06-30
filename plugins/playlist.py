@@ -7,7 +7,7 @@ from pyrogram.types import (
 from pyrogram import Client
 
 from modules.helpers.decorators import authorized_users_only
-from modules.queues import QUEUE, get_queue
+from modules.clientbot.queues import QUEUE, get_queue
 from modules.helpers.filters import command, other_filters
 
 
@@ -21,18 +21,18 @@ keyboard = InlineKeyboardMarkup(
 @authorized_users_only
 async def playlist(client, m: Message):
     chat_id = m.chat.id
-    if chat_id in QUEUE:
-        chat_queue = get_queue(chat_id)
-        if len(chat_queue) == 1:
+    if int(chat_id) in ACTV_CALLS:
+        position = await queues.put(chat_id, file=file_path))
+        if len(chat_id) == 1:
             await m.reply(
                 f"🔰 **ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ**`:`\n\n" \
-                f"🔥 **[{chat_queue[0][0]}]({chat_queue[0][2]})**\n\n" \
+                f"🔥 **[{queues[chat_id][0][0]}]({queues[chat_id][0][2]})**\n\n" \
                 f"**📱 ǫᴜᴇᴜᴇ sᴏɴɢ ʟɪsᴛ**`:`\n"
-            l = len(chat_queue)
+            l = len(chat_id)
             for x in range(1, l):
-                han = chat_queue[x][0]
-                hok = chat_queue[x][2]
-                hap = chat_queue[x][3]
+                han = queues[chat_id][x][0]
+                hok = queues[chat_id][x][2]
+                hap = queues[chat_id][x][3]
                 QUE = QUE + "\n" + f"`#{x}` - [{han}]({hok}) | `{hap}`"
             await m.reply(QUE, reply_markup=keyboard, disable_web_page_preview=True)
     else:
