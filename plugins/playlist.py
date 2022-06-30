@@ -25,7 +25,7 @@ keyboard = InlineKeyboardMarkup(
 async def playlist(client, m: Message):
     chat_id = m.chat.id
     if int(chat_id) in ACTV_CALLS:
-        position = await queues.put(chat_id, file=file_path))
+        position = await queues.put(chat_id, file=file_path)
         if len(chat_id) == 1:
             await m.reply(
                 f"🔰 **ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ**`:`\n\n" \
