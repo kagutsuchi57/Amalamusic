@@ -1,3 +1,5 @@
+©copyright infringement on Telugu Coders
+
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from modules.clientbot.queues import queues, clear          
@@ -9,6 +11,9 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import InputAudioStream
 from modules.clientbot import clientbot
+
+
+## don't change any value in this repo if you change the value bot will crash your heroku accounts
 
 menu_keyboard = InlineKeyboardMarkup(
     [
