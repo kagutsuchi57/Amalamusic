@@ -31,7 +31,7 @@
 
 **ᴄᴏɴᴛᴀᴄᴛ ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs**
 
-**[ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs]** (https://telegram.me/tgshadow_fighters)
+**ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs**(https://telegram.me/tgshadow_fighters)
 
 
 
