@@ -31,7 +31,6 @@ async def playlist(client, m: Message):
                 f"🔰 **ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ**`:`\n\n" \
                 f"🔥 **[{queues[chat_id][0][0]}]({queues[chat_id][0][2]})**\n\n" \
                 f"**📱 ǫᴜᴇᴜᴇ sᴏɴɢ ʟɪsᴛ**`:`\n"
-            l = len(chat_id)
             for x in range(1, l):
                 han = queues[chat_id][x][0]
                 hok = queues[chat_id][x][2]
