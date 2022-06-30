@@ -6,7 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import Client
 
-from modules.helpers.decorators import sudo_users_only
+from modules.helpers.decorators import authorized_users_only
 from modules.queues import QUEUE, get_queue
 from driver.filters import command, other_filters
 
@@ -18,7 +18,7 @@ keyboard = InlineKeyboardMarkup(
 
 
 @Client.on_message(command(["playlist", f"playlist@{BOT_USERNAME}", "queue", f"queue@{BOT_USERNAME}"]) & other_filters)
-@sudo_users_only()
+@authorized_users_only
 async def playlist(client, m: Message):
     chat_id = m.chat.id
     if chat_id in QUEUE:
