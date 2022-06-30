@@ -1,6 +1,6 @@
 {
     "name": "Telugu coders",
-    "logo": "",
+    "logo": "https://te.legra.ph/file/48b15ea2011dc80cdcaab.jpg",
     "description": "An Advanced Premium Music Bot For Telegram Groups VC.",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/Telugucoders/Amalamusic",
@@ -20,6 +20,10 @@
         },
         "STRING_SESSION": {
             "description": "Pyrogram String Session",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "PUT YOUR BOT USERNAME WITHOUT @",
             "required": true
         }
     },
