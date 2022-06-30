@@ -1,3 +1,6 @@
+## ©copyright infringement on Telugu Coders
+
+
 import asyncio
 from time import time
 from datetime import datetime
@@ -27,8 +30,10 @@ async def _human_time_duration(seconds):
             parts.append('{} {}{}'
                          .format(amount, unit, "" if amount == 1 else "s"))
     return ', '.join(parts)
+
     
-   
+   ## don't change any value in this repo if you change the value bot will crash your heroku accounts. 
+
 
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
