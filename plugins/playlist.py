@@ -8,7 +8,7 @@ from pyrogram import Client
 
 from modules.helpers.decorators import authorized_users_only
 from modules.queues import QUEUE, get_queue
-from driver.filters import command, other_filters
+from modules.helpers.filters import command, other_filters
 
 
 
