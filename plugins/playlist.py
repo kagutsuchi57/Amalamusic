@@ -30,12 +30,12 @@ async def playlist(client, m: Message):
             await m.reply(
                 f"🔰 **ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ**`:`\n\n" \
                 f"🔥 **[{queues[chat_id][0][0]}]({queues[chat_id][0][2]})**\n\n" \
-                f"**📱 ǫᴜᴇᴜᴇ sᴏɴɢ ʟɪsᴛ**`:`\n"
+                f"**📱 ǫᴜᴇᴜᴇ sᴏɴɢ ʟɪsᴛ**`:`\n") 
             for x in range(1, l):
                 han = queues[chat_id][x][0]
                 hok = queues[chat_id][x][2]
                 hap = queues[chat_id][x][3]
-                QUE = QUE + "\n" + f"`#{x}` - [{han}]({hok}) | `{hap}`") 
+                QUE = QUE + "\n" + f"`#{x}` - [{han}]({hok}) | `{hap}`"
             await m.reply(QUE, reply_markup=keyboard, disable_web_page_preview=True)
     else:
         await m.reply("❌ **ɴᴏᴛʜɪɴɢ ɪs ᴄᴜʀʀᴇɴᴛʟʏ sᴛʀᴇᴀᴍɪɴɢ.**") 
