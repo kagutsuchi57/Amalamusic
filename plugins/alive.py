@@ -8,7 +8,7 @@ from modules.helpers.filters import command
 from modules.helpers.command import commandpro
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
+from modules.config import GROUP, NETWORK, BOT_USERNAME
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -50,10 +50,10 @@ async def start_(client: Client, message: Message):
             ],[
             InlineKeyboardButton("$ᴅᴏɴᴀᴛᴇ", url="https://t.me/Telugucodersdonations_bot"), 
             ],[
-            InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
-            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url="https://t.me/telugucoders"), 
+            InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
+            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
             ],[
-            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/Amalamusicbot?startgroup=true")
+            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
         ) 
@@ -75,16 +75,16 @@ async def alive(client: Client, message: Message):
     )
 
 
-@Client.on_message(commandpro(["/repo",]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["/repo", "#repo"]) & filters.group & ~filters.edited)
 async def repo(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/4963e9019e0328075e980.jpg",
-        caption=f"""ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 🙊""",
+        photo=f"https://te.legra.ph/file/d65ba2c34eb7c058c1c32.jpg",
+        caption=f"""ᴄʜᴇᴄᴋ ɴᴏᴡ😃""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ʀᴇᴘᴏ", callback_data="source")
+                        "ᴄʜᴇᴄᴋ ɴᴏᴡ☺", url="https://github.com/Telugucoders/Amalamusic")
                 ]
             ]
         ),
