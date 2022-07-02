@@ -29,6 +29,14 @@
         "SUDO_USERS": {
             "description": "PUT YOUR SUDO USERS ID",
             "required": true
+        },
+        "GROUP": {
+            "description": "put your group name without@ EX: tgshadow_fighters",
+            "required": true
+        },
+        "NETWORK": {
+            "description": "put your channel username without@ EX: telugucoders",
+            "required": true
         }
     },
     "buildpacks": [
