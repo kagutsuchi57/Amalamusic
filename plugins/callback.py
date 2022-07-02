@@ -46,10 +46,10 @@ async def start_set(_, query: CallbackQuery):
             ],[
             InlineKeyboardButton("$ᴅᴏɴᴀᴛᴇ", url="https://t.me/Telugucodersdonations_bot"), 
             ],[
-            InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url="https://t.me/tgshadow_fighters"), 
-            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url="https://t.me/telugucoders"), 
+            InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
+            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
             ],[
-            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/Amalamusicbot?startgroup=true")
+            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
         ) 
