@@ -1,5 +1,6 @@
 ## © copyright infringement on Telugu coders 
 ## © @telugucoders
+## kanagers are not allowed here 
 
 import os
 import aiofiles
@@ -130,7 +131,7 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "* ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ ᴜʀ ɢʀᴏᴜᴘ 🙊   ...**")
+                        "* ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ ᴜʀ ɢʀᴏᴜᴘ 🙊...**")
                     return
 
                 try:
@@ -173,7 +174,6 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"
                         ),
@@ -212,7 +212,6 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"
                         ),
@@ -228,7 +227,6 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"
                         ),
@@ -282,7 +280,6 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"
                         ),
@@ -292,7 +289,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 Ƥɭɑy 🔊 Ɱʋsɩƈ 💿 Lɘss ⚡️\n🤟 Ƭɦɑɳ⚡️ {DURATION_LIMIT} 💞 Ɱɩɳʋʈɘ ...**"
+                f"**⚔️ᴘʟᴀʏ ᴀ ᴍᴜsɪᴄ ʟᴇss ᴛʜᴀɴ ᴛʜɪs ᴅᴜʀᴀᴛɪᴏɴ {DURATION_LIMIT} 💞 ᴍɪɴᴜᴛᴇ ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -306,7 +303,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption=f"**🔊 𝗡𝗲𝘅𝘁 𝗦𝗼𝗻𝗴 𝗙𝗿𝗼𝗺 💪 𝗠𝘆 𝗦𝗲𝗿𝘃𝗲𝗿 😎 𝗔𝘁 𝗣𝗼𝘀𝗶𝘁𝗶𝗼𝗻 ❤️ ...**".format(position),
+            caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ...**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -323,7 +320,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"**❰ 𝗔𝗺𝗮𝗹𝗮 ❘ 𝗿𝗼𝗯𝗼𝘁 ❱ ❤ 𝗡𝗼𝘄 🤘 𝗣𝗹𝗮𝘆𝗶𝗻𝗴 📀 𝗙𝗿𝗼𝗺 🔊 𝗽𝗿𝗶𝘃𝗮𝘁𝗲  😎 𝗦𝗲𝗿𝘃𝗲𝗿...**".format(),
+            caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ...**".format(),
            )
 
     os.remove("final.png")
