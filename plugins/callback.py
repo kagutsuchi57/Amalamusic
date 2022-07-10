@@ -26,14 +26,14 @@ async def start_set(_, query: CallbackQuery):
 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) !**
 """, 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("📚ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
+            InlineKeyboardButton("📚 ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
             ],[
-            InlineKeyboardButton("$ᴅᴏɴᴀᴛᴇ", url="https://t.me/Telugucodersdonations_bot"), 
+            InlineKeyboardButton("💬 ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
             ],[
-            InlineKeyboardButton("✉️sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
-            InlineKeyboardButton("📡ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
+            InlineKeyboardButton("🍃 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
+            InlineKeyboardButton("📡 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
             ],[
-            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            InlineKeyboardButton("🍀 ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🍀", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
         ) 
@@ -68,7 +68,6 @@ async def commands_set(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("general_list"))
 async def general_list(_, query: CallbackQuery):
-    await query.answer("opening general commands", show_alert=True)
     await query.edit_message_text(
         f"""🍀 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
@@ -93,7 +92,6 @@ async def general_list(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("skip_list"))
 async def skip_list(_, query: CallbackQuery): 
-    await query.answer("skiped current song")
     await query.edit_message_text(
         f"""👋🏻 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
@@ -113,7 +111,6 @@ async def skip_list(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("pause_list"))
 async def pause_list(_, query: CallbackQuery):
-    await query.answer("pause current playing song")
     await query.edit_message_text(
         f"""💘 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 ➠ **/pause ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ sᴜᴘᴇʀ ɢʀᴏᴜᴘs ғᴏʀ ᴘᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ ɪɴ ɢʀᴏᴜᴘ/nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴍᴀᴅᴇ ғᴏʀ ᴀᴅᴍɪɴs ᴀɴᴅ ʙᴏᴛ ᴄʀᴇᴀᴛᴏʀ's..**
@@ -132,7 +129,6 @@ async def pause_list(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("resume_list")) 
 async def resume_list(_, query: CallbackQuery): 
-    await query.answer("resume current playing song")
     await query.edit_message_text(
         f"""❤ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 ➠ **/resume ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ sᴜᴘᴇʀ ɢʀᴏᴜᴘs ғᴏʀ ʀᴇsᴜᴍᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ sᴏɴɢ/nᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴍᴀᴅᴇ ғᴏʀ ᴀᴅᴍɪɴs ᴀɴᴅ ʙᴏᴛ ᴄʀᴇᴀᴛᴏʀ's..**
@@ -151,7 +147,6 @@ async def resume_list(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("stop_list"))
 async def stop_list(_, query: CallbackQuery):
-    await query.answer("stopping current playing song")
     await query.edit_message_text(
         f"""👋🏻 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
@@ -171,7 +166,6 @@ async def stop_list(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("play_list"))
 async def play_list(_, query: CallbackQuery):
-    await query.answer("playing song in vc")
     await query.edit_message_text(
         f"""✨ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
@@ -191,15 +185,14 @@ async def play_list(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("source"))
 async def source(_, query: CallbackQuery): 
-    await query.answer("team shadow source code")
     await query.edit_message_text(
         f"""❣️ **ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 
-➠  **ᴀᴍᴀʟᴀ ᴍᴜsɪᴄ sᴏᴜʀᴄᴇ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ sᴏᴜʀᴄᴇ ʀᴇᴘᴏʀᴛɪɴɢ ᴀɴʏ ʙᴜɢs ᴏʀ ʀᴇᴘᴏʀᴛs ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)!**""", 
+➠  **ᴛʜɪs ɪs ᴛʜᴇ ᴀᴍᴀʟᴀ ᴍᴜsɪᴄ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ғᴏʀᴋ ᴀɴᴅ ɢɪᴠᴇ ᴀ ⭐ sᴛᴀʀᴛ ᴛᴏ ʀᴇᴘᴏ""", 
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🗑 ʙɪɴ", callback_data="close_panel")]]
+            [[InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://github.com/Telugucoders/Amalamusic")]]
         ),
-    )
+    ) 
 
 
 @Client.on_callback_query(filters.regex("info"))
@@ -208,9 +201,9 @@ async def info(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""✨ ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
-💘 ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ɪs ᴀ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ɪɴ sᴏ ᴍᴀɴʏ sᴇʀᴠᴇʀ's, ɪᴛ's ᴏɴʟɪɴᴇ sɪɴᴄᴇ 𝟷sᴛ ᴊᴜɴᴇ 𝟸𝟶𝟸𝟸 ᴀɴᴅ ɪᴛ's ᴄᴏɴsᴛᴀɴᴛʟʏ ᴜᴘᴅᴀᴛᴇᴅ \n
-💝 ᴛʜɪs ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) \n 
-❣️ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)
+➠ ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ɪs ᴀ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ɪɴ sᴏ ᴍᴀɴʏ sᴇʀᴠᴇʀ's, ɪᴛ's ᴏɴʟɪɴᴇ sɪɴᴄᴇ 𝟷sᴛ ᴊᴜɴᴇ 𝟸𝟶𝟸𝟸 ᴀɴᴅ ɪᴛ's ᴄᴏɴsᴛᴀɴᴛʟʏ ᴜᴘᴅᴀᴛᴇᴅ \n
+➠ ᴛʜɪs ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ](https://t.me/tgshadow_fighters) \n 
+➠ © ᴏɴ ʙᴇʜᴀʟғ ᴏғ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)
 """, 
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🗑 ʙɪɴ", callback_data="close_panel")]]
